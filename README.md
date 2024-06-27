@@ -63,6 +63,7 @@ ENGenieAI is an interactive AI tutor designed to assist engineering students by 
 ## Project Structure
 
 engenieai/
+
 ├── backend.py # Backend logic for document handling and LLM interactions
 
 ├── frontend.py # Streamlit application frontend
