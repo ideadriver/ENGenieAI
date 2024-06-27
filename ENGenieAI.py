@@ -97,12 +97,8 @@ uploaded_files = st.file_uploader("Upload Files", type=["pdf"], accept_multiple_
 
 prompt1 = st.chat_input("Search Box")
 
-# Load environment variables
-groq_api_key = os.getenv("GROQ_API_KEY")
-google_api_key = os.getenv("GOOGLE_API_KEY")
-
 # Initialize DocumentHandler and RAG
-doc_handler = DocumentHandler(groq_api_key, google_api_key)
+doc_handler = DocumentHandler()
 llm = doc_handler.load_llm()
 embeddings = doc_handler.create_embeddings()
 rag = RetrievalAndGeneration(llm)
